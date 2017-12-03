@@ -13,11 +13,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 //Pages
 import { MyApp } from './app.component';
-import { PrivacyPolicyPage } from '../pages/legal/privacy-policy/privacy-policy';
+//import { PrivacyPolicyPage } from '../pages/legal/privacy-policy/privacy-policy';
 import { TermsOfServicePage } from '../pages/legal/terms-of-service/terms-of-service';
 import { TutorialPage } from './../pages/tutorial/tutorial';
-import { ChangeSchoolPage } from '../pages/choose-school/change-school';
-import { SchoolListPage } from '../pages/choose-school/school-list/school-list';
+import { ChangeUniversityPage } from '../pages/choose-university/change-university';
+import { UniversityListPage } from '../pages/choose-university/university-list/university-list';
 import { TabsPage } from './../pages/tabs/tabs';
 import { HelpPage } from './../pages/help/help';
 import { ResourceList } from './../pages/resources-list/resource-list';
@@ -39,11 +39,11 @@ import { NativeDeviceFeatures } from './../providers/native-device-features';
 
 let pages = [
   MyApp,
-  PrivacyPolicyPage,
+  //PrivacyPolicyPage,
   TermsOfServicePage,
   TutorialPage,
-  ChangeSchoolPage,
-  SchoolListPage,
+  ChangeUniversityPage,
+  UniversityListPage,
   TabsPage,
   HelpPage,
   ResourceList,
@@ -105,7 +105,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 export function provideSettings(storage: Storage) {
   return new Settings(storage, {
     enableIntroPage: true,
-    school: {
+    university: {
       name: "UMass: Dartmouth",
       logo: "assets/img/umd_logo_square.png"
     }

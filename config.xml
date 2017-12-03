@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="0.9.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>StaySafe</name>
+    <name>Sexual Violence Prevention and Support</name>
     <description>An app for campus saftey aimed at stopping sexual assault.</description>
     <author>Christian Ellis</author>
-    <content original-src="index.html" src="http://192.168.1.149:8101" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-intent href="http://*/*" />
@@ -87,12 +87,13 @@
     <allow-navigation href="http://172.18.21.78:8101" />
     <allow-navigation href="http://192.168.1.149:8102" />
     <allow-navigation href="http://192.168.1.149:8101" />
-    <engine name="android" spec="^6.3.0" />
-    <engine name="ios" spec="^4.5.3" />
+    <allow-navigation href="http://192.168.1.163:8101" />
+    <engine name="android" spec="^6.4.0" />
+    <engine name="ios" spec="4.5.4" />
     <plugin name="cordova-plugin-console" spec="^1.1.0" />
-    <plugin name="cordova-plugin-device" spec="^1.1.6" />
-    <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
-    <plugin name="cordova-plugin-statusbar" spec="^2.2.3" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
+    <plugin name="cordova-plugin-device" spec="^1.1.7" />
+    <plugin name="cordova-plugin-splashscreen" spec="^4.1.0" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.3.0" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
 </widget>

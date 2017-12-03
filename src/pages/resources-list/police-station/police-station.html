@@ -2,14 +2,22 @@
   <ion-navbar>
       <ion-title>Local Police Stations</ion-title>
   </ion-navbar>
-</ion-header> 
+</ion-header>
 
 <ion-content>
   <ion-card *ngFor='let policeStation of policeStationCollection'>
     <ion-card-header text-center style='font-size: 20px; color:primary' text-wrap>{{ policeStation.name }}</ion-card-header>
-    <ion-card-content  text-wrap>
+    <ion-card-content text-wrap>
       <h2 text-center><b>Phone #:</b><br><a [href]="this.nativeDeviceFeatures.onOpenDialer(policeStation.phone)">{{ policeStation.phone }}</a></h2>
       <h2 text-center><b>Address:</b><br><a [href]="this.nativeDeviceFeatures.onOpenMaps(policeStation.address)">{{ policeStation.address }}</a></h2>
+      <div *ngIf="policeStation.nonEmergencyPhone">
+        <br>
+        <h2 text-center><b>Non Emergency Phone Numbers:</b></h2>
+        <div *ngFor="let phone of policeStation.nonEmergencyPhone" class="policeStation">
+          <h2 *ngIf="phone.desc" text-center><span class="underline">Desc:</span> {{phone.desc}}</h2>
+          <h2 text-center><span class="underline">Phone #:</span> <a [href]="this.nativeDeviceFeatures.onOpenDialer(phone.phone)">{{ phone.phone }}</a></h2>
+        </div>
+      </div>
       <div>
         <br>
         <h2 text-center><b>Description:</b> </h2>

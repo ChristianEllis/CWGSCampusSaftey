@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { TranslateService } from '@ngx-translate/core';
 
 import { HelpPage } from '../help/help';
 import { ResourceList } from './../resources-list/resource-list';

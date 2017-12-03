@@ -13,9 +13,9 @@ export default [
     phone: "(508) 999-6636",
     address:"405 County Street New Bedford, MA 02740",
     hours: "24-hour hotline",
-    desc: [ 
+    desc: [
       "Provides free and confidential 24-hour easily accessible services to those in need.",
-      "Provide counseling, education, outreach, referrals and resources.", 
+      "Provide counseling, education, outreach, referrals and resources.",
       "May be called the Women's center, but also serves men and children as well."
     ]
   }

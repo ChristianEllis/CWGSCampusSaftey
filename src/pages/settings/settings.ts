@@ -5,7 +5,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { Settings } from '../../providers/settings';
 
 import { TranslateService } from '@ngx-translate/core';
-import { ChangeSchoolPage } from '../choose-school/change-school';
+import { ChangeUniversityPage } from '../choose-university/change-university';
 
 /*
  * The Settings page is a simple form that syncs with a Settings provider
@@ -17,8 +17,8 @@ import { ChangeSchoolPage } from '../choose-school/change-school';
 })
 export class SettingsPage {
 
-  changeSchoolPage =ChangeSchoolPage;
-  
+  changeUniversityPage =ChangeUniversityPage;
+
   // Our local settings object
   options: any;
 

@@ -13,6 +13,14 @@
         <a *ngIf='resource.geolocation' [href]="this.nativeDeviceFeatures.onOpenMaps(resource.geolocation, resource.name)">{{ resource.location }}</a>
         <a *ngIf='!resource.geolocation' [href]="this.nativeDeviceFeatures.onOpenMaps(resource.location)">{{ resource.location }}</a>
       </h2>
+      <div *ngIf="resource.otherPhone">
+        <br>
+        <h2 text-center><b>Other Phone Numbers:</b></h2>
+        <div *ngFor="let phone of resource.otherPhone" class="resource">
+          <h2 *ngIf="phone.desc" text-center><span class="underline">Desc:</span> {{phone.desc}}</h2>
+          <h2 text-center><span class="underline">Phone #:</span> <a [href]="this.nativeDeviceFeatures.onOpenDialer(phone.phone)">{{ phone.phone }}</a></h2>
+        </div>
+      </div>
       <h2 text-center ><b>Hours:</b><br>{{ resource.hours }}</h2>
       <div>
         <br>

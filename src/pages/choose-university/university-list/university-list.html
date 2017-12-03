@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Universities</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <button ion-item *ngFor="let university of schoolCollection" (click)="onChosenUniversity(university)">
+        <img [src]="university.logo">
+          {{ university.name }}
+      </button>
+  </ion-list>
+</ion-content>
