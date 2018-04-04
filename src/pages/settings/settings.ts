@@ -6,6 +6,7 @@ import { Settings } from '../../providers/settings';
 
 import { TranslateService } from '@ngx-translate/core';
 import { ChangeUniversityPage } from '../choose-university/change-university';
+import { FeedbackFormPage } from '../feedback-form/feedback-form';
 
 /*
  * The Settings page is a simple form that syncs with a Settings provider
@@ -17,8 +18,8 @@ import { ChangeUniversityPage } from '../choose-university/change-university';
 })
 export class SettingsPage {
 
-  changeUniversityPage =ChangeUniversityPage;
-
+  changeUniversityPage = ChangeUniversityPage;
+  feedbackFormPage = FeedbackFormPage;
   // Our local settings object
   options: any;
 

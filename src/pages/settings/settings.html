@@ -14,9 +14,13 @@
         <ion-label>{{ 'SETTINGS_enableIntroPage' | translate }}</ion-label>
         <ion-toggle formControlName="enableIntroPage"></ion-toggle>
       </ion-item>
-      <button ion-item [navPush]='changeUniversityPage'>
-        Change your university 
+      <button ion-item [navPush]="feedbackFormPage">
+        <ion-icon name="chatbubbles" item-start color=""></ion-icon>
+        <ion-label>Submit Feedback</ion-label>
       </button>
+      <!-- <button ion-item [navPush]='changeUniversityPage'>
+        Change your university
+      </button> -->
     </ion-list>
   </form>
 </ion-content>

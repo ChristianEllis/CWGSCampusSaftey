@@ -1,5 +1,11 @@
+Node version: v8.9.1
+
+Cordova version: 7.1.0
+
+Config.xml file: 
+
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="eduumassdsexualviolenceproventionedu.umassd.sexualviolenceprevention" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="edu-umassd-sexualviolenceprovention-edu.umassd.sexualviolenceprevention" version="0.9.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Sexual Violence Prevention and Support</name>
     <description>An app for campus saftey aimed at stopping sexual assault.</description>
     <author>Christian Ellis</author>
@@ -18,7 +24,7 @@
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="19" />
+    <preference name="android-minSdkVersion" value="16" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="FadeSplashScreenDuration" value="300" />
@@ -85,26 +91,127 @@
         <icon height="1024" src="resources/ios/icon/icon-1024.png" width="1024" />
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
     </platform>
-    <allow-navigation href="http://localhost:8080/*" />
-    <feature name="CDVWKWebViewEngine">
-        <param name="ios-package" value="CDVWKWebViewEngine" />
-    </feature>
-    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <allow-navigation href="http://172.18.5.242:8101" />
     <allow-navigation href="http://172.18.21.78:8101" />
     <allow-navigation href="http://192.168.1.149:8102" />
     <allow-navigation href="http://192.168.1.149:8101" />
     <allow-navigation href="http://192.168.1.163:8101" />
     <allow-navigation href="http://192.168.1.184:8101" />
-    <allow-navigation href="http://192.168.1.164:8101" />
-    <engine name="android" spec="^7.1.0" />
-    <engine name="ios" spec="4.5.4" />
+    <engine name="android" spec="^6.4.0" />
+    <engine name="ios" spec="^4.5.4" />
     <plugin name="cordova-plugin-console" spec="^1.1.0" />
-    <plugin name="cordova-plugin-device" spec="^2.0.1" />
-    <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <plugin name="cordova-plugin-device" spec="^1.1.7" />
+    <plugin name="cordova-plugin-splashscreen" spec="^4.1.0" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.3.0" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
-    <plugin name="cordova-plugin-advanced-http" spec="^1.11.0" />
-    <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
-    <plugin name="cordova-plugin-statusbar" spec="git+https://github.com/apache/cordova-plugin-statusbar.git" />
 </widget>
+
+
+Plugins: 
+
+cordova-plugin-console,cordova-plugin-device,cordova-plugin-splashscreen,cordova-plugin-statusbar,cordova-plugin-whitelist,ionic-plugin-keyboard
+
+Android platform:
+
+*************************************************************************
+The "android" command is deprecated.
+For manual SDK, AVD, and project management, please use Android Studio.
+For command-line tools, use tools/bin/sdkmanager and tools/bin/avdmanager
+*************************************************************************
+Running /Users/christian/Library/Android/sdk/tools/bin/avdmanager list target
+
+Loading local repository...                                                     [=========                              ] 25% Loading local repository...       [=========                              ] 25% Fetch remote repository...        [=========                              ] 25% Fetch remote repository...        [=========                              ] 25% Fetch remote repository...        [=======================================] 100% Fetch remote repository...       Available Android targets:
+----------
+id: 1 or "android-15"
+     Name: Android API 15
+     Type: Platform
+     API level: 15
+     Revision: 5
+----------
+id: 2 or "android-16"
+     Name: Android API 16
+     Type: Platform
+     API level: 16
+     Revision: 5
+----------
+id: 3 or "android-17"
+     Name: Android API 17
+     Type: Platform
+     API level: 17
+     Revision: 3
+----------
+id: 4 or "android-18"
+     Name: Android API 18
+     Type: Platform
+     API level: 18
+     Revision: 3
+----------
+id: 5 or "android-19"
+     Name: Android API 19
+     Type: Platform
+     API level: 19
+     Revision: 4
+----------
+id: 6 or "android-20"
+     Name: Android API 20
+     Type: Platform
+     API level: 20
+     Revision: 2
+----------
+id: 7 or "android-21"
+     Name: Android API 21
+     Type: Platform
+     API level: 21
+     Revision: 2
+----------
+id: 8 or "android-22"
+     Name: Android API 22
+     Type: Platform
+     API level: 22
+     Revision: 2
+----------
+id: 9 or "android-23"
+     Name: Android API 23
+     Type: Platform
+     API level: 23
+     Revision: 3
+----------
+id: 10 or "Google Inc.:Google APIs:24"
+     Name: Google APIs
+     Type: Add-On
+     Vendor: Google Inc.
+     Revision: 1
+     Description: Google APIs, Android 24
+     Based on Android 7.0 (API level 24)
+     Libraries:
+      * com.android.future.usb.accessory (usb.jar)
+          API for USB Accessories
+      * com.google.android.media.effects (effects.jar)
+          Collection of video effects
+      * com.google.android.maps (maps.jar)
+          API for Google Maps
+----------
+id: 11 or "android-24"
+     Name: Android API 24
+     Type: Platform
+     API level: 24
+     Revision: 2
+----------
+id: 12 or "android-25"
+     Name: Android API 25
+     Type: Platform
+     API level: 25
+     Revision: 3
+----------
+id: 13 or "android-26"
+     Name: Android API 26
+     Type: Platform
+     API level: 26
+     Revision: 2
+
+iOS platform:
+
+Xcode 9.2
+Build version 9C40b
+

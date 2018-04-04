@@ -1,6 +1,8 @@
+//Library Imports
 import { NavController, AlertController } from 'ionic-angular';
 import { Component } from '@angular/core';
 
+//Page Imports
 import { SettingsPage } from './../settings/settings';
 import { JustAssaultedPage } from './just-assaulted/just-assaulted';
 import { HospitalPage } from './hospital/hostpital';
@@ -13,18 +15,15 @@ import { CounselingPage } from './counseling/counseling';
   selector: 'page-resource-list',
   templateUrl: 'resource-list.html'
 })
-
-export class ResourceList{
+export class ResourceList {
   settingsPage = SettingsPage;
   justAssaultedPage = JustAssaultedPage;
   hospitalPage = HospitalPage;
   policeStationPage = PoliceStationPage;
   onCampusHelpPage = OnCampusHelpPage;
   counselingPage = CounselingPage;
-  
-  constructor(private navCtrl:NavController, private alertCtrl: AlertController){
-  
-  }
+
+  constructor(private navCtrl:NavController, private alertCtrl: AlertController) { }
 
   viewAmnestyPolicy() {
     const alert =  this.alertCtrl.create({
@@ -56,6 +55,6 @@ export class ResourceList{
         },
       ]
     });
-    alert.present(); 
+    alert.present();
   }
 }

@@ -31,6 +31,6 @@ export class TutorialPage {
     this.navCtrl.setRoot(TabsPage, {}, {
       animate: false
     });
-    this.navCtrl.push(UniversityListPage);
+    //this.navCtrl.push(UniversityListPage);
   }
 }

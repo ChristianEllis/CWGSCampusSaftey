@@ -32,14 +32,14 @@ export class MyApp {
           this.nav.setRoot(TutorialPage);
         else
           this.nav.setRoot(TabsPage);
-      })    
+      })
   }
 
-  ionViewDidLoad() {
+  ionViewWillLoad() {
     this.platform.ready()
     .then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      this.statusBar.overlaysWebView(false);
+      this.statusBar.backgroundColorByHexString('#F8F8F8');
     });
   }
 

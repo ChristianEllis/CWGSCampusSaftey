@@ -30,6 +30,10 @@ export default [
   {
     question: "What is meant by victim confidentiality?",
     answer: "No one else besides a Title IX coordinator will be made aware of the situation. Law enforcement will not be told unless you are a danger to yourself or others."
+  },
+  {
+    question: "What is a Title IX coordinator?",
+    answer: "The goal of a Title IX coordinator is to ensure that no person in the United States shall, on the basis of sex, be excluded from participation in, be denied the benefits of, or be subjected to discrimination under any education program or activity receiving Federal financial assistance."
   }
   // {
   //   id: "",

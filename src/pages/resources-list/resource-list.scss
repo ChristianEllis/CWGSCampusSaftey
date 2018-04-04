@@ -1,9 +1,24 @@
 page-resource-list{
+  img {
+    background: transparent;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
   .underline {
     text-decoration: underline;
   }
+
   //iPhone 6 Plus, 7 Plus, 8 Plus (large screens)
   @media (min-width: 414px) {
+    img {
+      height: 75px !important;
+      width: 75px !important;
+    }
     ion-card h1{
       font-weight: bolder !important;
       font-size: 2em !important;
@@ -20,9 +35,13 @@ page-resource-list{
       font-size: 1.4em;
     }
   }
-  
+
   //iPhone 6, 7, 8 (medium screens)
   @media (min-width: 375px) and (max-width: 413px) {
+    img {
+      height: 60px !important;
+      width: 60px !important;
+    }
     ion-card h1{
       font-weight: bolder !important;
       font-size: 1.8em !important;
@@ -42,6 +61,10 @@ page-resource-list{
 
   //iPhone 5, 5s, SE (small screens)
   @media (min-width: 320px) and (max-width: 374px) {
+    img {
+      height: 55px !important;
+      width: 55px !important;
+    }
     ion-card h1{
       font-weight: bolder !important;
       font-size: 1.7em !important;

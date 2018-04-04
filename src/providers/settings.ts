@@ -6,12 +6,7 @@ import { Storage } from '@ionic/storage';
 /**
  * A simple settings/config class for storing key/value pairs with persistence.
  */
-@NgModule({
-  providers: [Storage]
-})
-
 @Injectable()
-
 export class Settings {
   private SETTINGS_KEY: string = '_settings';
 
@@ -21,7 +16,7 @@ export class Settings {
   _readyPromise: Promise<any>;
 
   constructor(
-    public storage: Storage, 
+    public storage: Storage,
     defaults: any) {
       this._defaults = defaults;
   }
@@ -44,7 +39,7 @@ export class Settings {
 
   _mergeDefaults(defaults: any) {
     for (let k in defaults) {
-      if (!(k in this.settings)) 
+      if (!(k in this.settings))
         this.settings[k] = defaults[k];
     }
     return this.setAll(this.settings);

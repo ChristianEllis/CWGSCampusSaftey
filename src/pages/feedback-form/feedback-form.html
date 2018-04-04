@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Feedback</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <h1 padding text-center><b>Have feedback?</b></h1>
+    <h3 padding-bottom text-center>Want a customized version of the app for your university? Do you have a feature request, bug report, or any general reccomendations? Please share with us! Write your comments in the text box below.</h3>
+    <h3 padding-bottom text-center>Please report instances of sexual violence through the app, not as feedback.</h3>
+    <h3 padding-bottom text-center class="underline"> Your message is anonymous!</h3>
+    <ion-item>
+      <ion-textarea
+        class="textarea-lg"
+        rows="5"
+        maxLength="1500"
+        [(ngModel)]="messageInput"
+        placeholder="Please write your comments here."></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked><b>Name</b> <span class="underline">(Optional)</span></ion-label>
+      <ion-input
+        class="ioninput-sm"
+        maxLength="75"
+        [(ngModel)]="nameInput"
+        placeholder="Enter name here."></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked text-wrap><b>Email</b> <span class="underline">(Optional</span> - if you want us to reach you)</ion-label>
+      <ion-input
+        class="ioninput-sm"
+        maxLength="75"
+        [(ngModel)]="emailInput"
+        placeholder="Enter email here."></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked text-wrap><b>Phone</b> <span class="underline">(Optional</span> - if you want us to reach you)</ion-label>
+      <ion-input
+        class="ioninput-sm"
+        maxLength="75"
+        [(ngModel)]="phoneInput"
+        placeholder="Enter phone number here."></ion-input>
+    </ion-item>
+    <div text-center padding>
+      <button
+      ion-button
+      text-center
+      [disabled] = 'disabled'
+      (click)='sendData()'>Submit Feedback</button>
+    </div>
+  </ion-card>
+</ion-content>

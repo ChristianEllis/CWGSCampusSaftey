@@ -5,7 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
   //for user settings
-import { Storage, IonicStorageModule } from '@ionic/storage';
+import { IonicStorageModule, Storage } from '@ionic/storage';
   //i18n
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -13,7 +13,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 //Pages
 import { MyApp } from './app.component';
-//import { PrivacyPolicyPage } from '../pages/legal/privacy-policy/privacy-policy';
+import { PrivacyPolicyPage } from '../pages/legal/privacy-policy/privacy-policy';
 import { TermsOfServicePage } from '../pages/legal/terms-of-service/terms-of-service';
 import { TutorialPage } from './../pages/tutorial/tutorial';
 import { ChangeUniversityPage } from '../pages/choose-university/change-university';
@@ -30,6 +30,7 @@ import { QuestionAnswerList} from './../pages/question-answer-list/question-answ
 import { QuestionDetailPage } from './../pages/question-answer-list/question-detail/question-detail';
 import { SearchPage } from './../pages/question-answer-list/search/search';
 import { SettingsPage } from './../pages/settings/settings';
+import { FeedbackFormPage } from '../pages/feedback-form/feedback-form';
 
 //Services
 import { Api } from '../providers/api';
@@ -37,9 +38,25 @@ import { Questions } from './../providers/questions'
 import { Settings } from '../providers/settings';
 import { NativeDeviceFeatures } from './../providers/native-device-features';
 
+// The translate loader needs to know where to load i18n files in Ionic's static asset pipeline.
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
+// For default settings ; very first time app is opened
+export function provideSettings(storage: Storage) {
+  return new Settings(storage, {
+    enableIntroPage: true,
+    university: {
+      name: "UMass: Dartmouth",
+      logo: "assets/img/umd_logo_square.png"
+    }
+  });
+}
+
 let pages = [
   MyApp,
-  //PrivacyPolicyPage,
+  PrivacyPolicyPage,
   TermsOfServicePage,
   TutorialPage,
   ChangeUniversityPage,
@@ -55,7 +72,8 @@ let pages = [
   QuestionAnswerList,
   QuestionDetailPage,
   SearchPage,
-  SettingsPage
+  SettingsPage,
+  FeedbackFormPage
 ]
 
 export function declarations() {
@@ -95,19 +113,3 @@ export function entryComponents() {
 })
 
 export class AppModule {}
-
-// The translate loader needs to know where to load i18n files in Ionic's static asset pipeline.
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
-
-// For default settings ; very first time app is opened
-export function provideSettings(storage: Storage) {
-  return new Settings(storage, {
-    enableIntroPage: true,
-    university: {
-      name: "UMass: Dartmouth",
-      logo: "assets/img/umd_logo_square.png"
-    }
-  });
-}

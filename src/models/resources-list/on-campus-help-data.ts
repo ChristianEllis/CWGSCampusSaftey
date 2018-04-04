@@ -1,6 +1,6 @@
 export default [
   {
-    name: "Center for Women, Gender and Sexuality",
+    name: "Center for Women, Gender & Sexuality",
     phone: "(508) 910-6567",
     otherPhone:[
       { desc: "Direct Line To Mrs. Harris", phone: "(508) 910-6568" },
